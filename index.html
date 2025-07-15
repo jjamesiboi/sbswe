@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Ball Sweden - Basket för Alla!</title>
+    <!-- Ladda Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Lätt grå bakgrund */
+            color: #333;
+            overflow-x: hidden; /* Förhindra horisontell scrollning på grund av animationer */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        /* Anpassad scrollbar för bättre estetik */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2d3748;
+        }
+
+        /* Animationer */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .scale-in.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header-sektion -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg py-4">
+        <div class="container flex flex-col md:flex-row justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold tracking-tight mb-4 md:mb-0">Street Ball Sweden</a>
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg font-semibold">
+                    <li><a href="#hem" class="hover:text-blue-200 transition duration-300 ease-in-out">Hem</a></li>
+                    <li><a href="#om-oss" class="hover:text-blue-200 transition duration-300 ease-in-out">Om Oss</a></li>
+                    <li><a href="#tavlingar" class="hover:text-blue-200 transition duration-300 ease-in-out">Tävlingar</a></li>
+                    <li><a href="#erbjudande" class="hover:text-blue-200 transition duration-300 ease-in-out">Vad vi erbjuder</a></li>
+                    <li><a href="#kontakt" class="hover:text-blue-200 transition duration-300 ease-in-out">Kontakt</a></li>
+                    <li><a href="#faq" class="hover:text-blue-200 transition duration-300 ease-in-out">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero-sektion -->
+    <section id="hem" class="bg-gradient-to-br from-blue-500 to-purple-600 text-white py-20 md:py-32 text-center shadow-xl rounded-b-3xl fade-in-up">
+        <div class="container">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                Street Ball Sweden – Där basket, musik och grymma vibes möts!
+            </h1>
+            <p class="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
+                Är du 15 år eller äldre och redo att ta din kärlek till basket till nästa nivå? Hos oss spelar det ingen roll om du är nybörjare eller erfaren – alla är välkomna!
+            </p>
+            <a href="#tavlingar" class="inline-block bg-white text-blue-700 hover:bg-blue-100 px-8 py-4 rounded-full text-lg font-bold shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Hitta nästa turnering!
+            </a>
+        </div>
+    </section>
+
+    <!-- Om Oss-sektion -->
+    <section id="om-oss" class="py-16 bg-white rounded-xl shadow-md mx-4 md:mx-auto mt-8 fade-in-up">
+        <div class="container">
+            <h2 class="text-4xl font-bold text-center mb-10 text-blue-700">Om Oss</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="text-lg leading-relaxed">
+                    <p class="mb-4">
+                        Street Ball Sweden föddes ur en genuin passion för basket och en önskan att skapa en inkluderande mötesplats för alla som älskar spelet. Vi tror på att sport ska vara roligt, socialt och tillgängligt.
+                    </p>
+                    <p class="mb-4">
+                        Våra turneringar är designade för att erbjuda en avslappnad men ändå tävlingsinriktad atmosfär där fair play och gemenskap står i fokus. Vi vill att varje evenemang ska vara en fest på planen, fylld med energi och positivitet.
+                    </p>
+                    <p>
+                        Kom och upplev adrenalinet, träffa nya vänner och bli en del av Street Ball Sweden-familjen! Vi ser fram emot att träffa dig på planen.
+                    </p>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-xl">
+                    <!-- Ersätt denna URL med en riktig stockbild av folk som spelar basket -->
+                    <img src="https://images.unsplash.com/photo-1519068732231-c426610738a1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bild av folk som spelar streetbasket" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/3498db/ffffff?text=Basket+Gemenskap';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kommande Tävlingar-sektion -->
+    <section id="tavlingar" class="py-16 bg-blue-50 rounded-xl shadow-md mx-4 md:mx-auto mt-8 fade-in-up">
+        <div class="container">
+            <h2 class="text-4xl font-bold text-center mb-10 text-blue-700">Kommande Tävlingar</h2>
+            <p class="text-center text-lg mb-8 max-w-2xl mx-auto">
+                Håll ögonen öppna här för att se var och när nästa turnering äger rum! Vi har evenemang <strong class="text-blue-600">en gång i veckan</strong> i våra olika städer.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Svedala Kort -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border-t-4 border-blue-500 scale-in">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-3">Svedala</h3>
+                    <p class="text-gray-700 mb-4">
+                        Spännande matcher och härlig stämning i Svedala! Perfekt för dig som vill spela nära hemmet.
+                    </p>
+                    <p class="text-sm text-gray-500">Datum: Uppdateras snart</p>
+                    <p class="text-sm text-gray-500">Plats: TBA</p>
+                </div>
+                <!-- Malmö Kort -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border-t-4 border-indigo-500 scale-in">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-3">Malmö</h3>
+                    <p class="text-gray-700 mb-4">
+                        Centrala Malmö bjuder in till intensiva streetbasketdueller. Missa inte chansen att glänsa!
+                    </p>
+                    <p class="text-sm text-gray-500">Datum: Uppdateras snart</p>
+                    <p class="text-sm text-gray-500">Plats: TBA</p>
+                </div>
+                <!-- Lund Kort -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out border-t-4 border-purple-500 scale-in">
+                    <h3 class="text-2xl font-bold text-purple-700 mb-3">Lund</h3>
+                    <p class="text-gray-700 mb-4">
+                        Basketfest i universitetsstaden Lund. Kom och visa vad du går för på planen!
+                    </p>
+                    <p class="text-sm text-gray-500">Datum: Uppdateras snart</p>
+                    <p class="text-sm text-gray-500">Plats: TBA</p>
+                </div>
+            </div>
+
+            <div class="text-center bg-white p-8 rounded-xl shadow-lg fade-in-up">
+                <h3 class="text-3xl font-bold text-blue-700 mb-4">Anmälan & Regler</h3>
+                <p class="text-lg mb-6">
+                    Mer information om hur du anmäler ditt lag eller dig själv, samt detaljerade regler för våra turneringar, kommer att publiceras här i god tid före varje evenemang.
+                </p>
+                <p class="text-xl font-semibold text-green-600 mb-6">
+                    Kom ihåg, vi spelar för att ha kul – och för att vinna <strong class="text-yellow-500">fina priser!</strong>
+                </p>
+                <a href="#kontakt" class="inline-block bg-blue-600 text-white hover:bg-blue-700 px-6 py-3 rounded-full text-lg font-semibold shadow-md transition duration-300 ease-in-out">
+                    Kontakta oss för mer info
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vad vi erbjuder-sektion -->
+    <section id="erbjudande" class="py-16 bg-white rounded-xl shadow-md mx-4 md:mx-auto mt-8 fade-in-up">
+        <div class="container">
+            <h2 class="text-4xl font-bold text-center mb-10 text-blue-700">Vad vi erbjuder</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Priser Kort -->
+                <div class="flex flex-col items-center text-center p-6 bg-blue-100 rounded-xl shadow-md transform hover:scale-105 transition duration-300 ease-in-out scale-in">
+                    <div class="text-5xl mb-4 text-yellow-500">🏆</div> <!-- Emoji för pris -->
+                    <h3 class="text-2xl font-bold text-blue-800 mb-2">Fina Priser</h3>
+                    <p class="text-gray-700">
+                        Vinnarna i varje turnering belönas med spännande priser. Kämpa för äran och belöningen!
+                    </p>
+                </div>
+                <!-- Dryck Kort -->
+                <div class="flex flex-col items-center text-center p-6 bg-green-100 rounded-xl shadow-md transform hover:scale-105 transition duration-300 ease-in-out scale-in">
+                    <div class="text-5xl mb-4 text-green-600">🥤</div> <!-- Emoji för dryck -->
+                    <h3 class="text-2xl font-bold text-green-800 mb-2">Svalkande Dryck</h3>
+                    <p class="text-gray-700">
+                        Vi ser till att det finns svalkande dryck tillgänglig för alla deltagare under våra evenemang.
+                    </p>
+                </div>
+                <!-- Vibes Kort -->
+                <div class="flex flex-col items-center text-center p-6 bg-purple-100 rounded-xl shadow-md transform hover:scale-105 transition duration-300 ease-in-out scale-in">
+                    <div class="text-5xl mb-4 text-purple-600">✨</div> <!-- Emoji för vibes -->
+                    <h3 class="text-2xl font-bold text-purple-800 mb-2">Grymma Vibes</h3>
+                    <p class="text-gray-700">
+                        En positiv och peppande atmosfär är garanterad. Kom och sprid god stämning!
+                    </p>
+                </div>
+                <!-- Musik Kort -->
+                <div class="flex flex-col items-center text-center p-6 bg-red-100 rounded-xl shadow-md transform hover:scale-105 transition duration-300 ease-in-out scale-in">
+                    <div class="text-5xl mb-4 text-red-600">🎶</div> <!-- Emoji för musik -->
+                    <h3 class="text-2xl font-bold text-red-800 mb-2">Peppande Musik</h3>
+                    <p class="text-gray-700">
+                        Rätt musik sätter stämningen. Förbered dig på en spellista som får dig att röra på fötterna!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tidigare Evenemang-sektion (Placeholder) -->
+    <section id="tidigare-evenemang" class="py-16 bg-blue-50 rounded-xl shadow-md mx-4 md:mx-auto mt-8 fade-in-up">
+        <div class="container">
+            <h2 class="text-4xl font-bold text-center mb-10 text-blue-700">Tidigare Evenemang</h2>
+            <p class="text-center text-lg mb-8 max-w-2xl mx-auto">
+                Här kommer vi att visa upp höjdpunkter från våra tidigare turneringar. Få en känsla för den fantastiska stämningen och spännande matcherna!
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Exempel på bildkort. Ersätt dessa URL:er med riktiga stockbilder. -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden scale-in">
+                    <img src="https://images.unsplash.com/photo-1587280690616-52a7b54778ad?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Matchbild från tidigare evenemang" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x250/a0aec0/ffffff?text=Matchbild+1';">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl mb-2 text-blue-700">Malmö Summer Slam 2024</h3>
+                        <p class="text-gray-700 text-sm">En fantastisk dag fylld med sol, basket och glädje!</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden scale-in">
+                    <img src="https://images.unsplash.com/photo-1579952528343-f6974d642c67?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Matchbild från tidigare evenemang" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x250/a0aec0/ffffff?text=Matchbild+2';">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl mb-2 text-blue-700">Lund City Challenge</h3>
+                        <p class="text-gray-700 text-sm">Intensiva dueller och nya talanger upptäcktes.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden scale-in">
+                    <img src="https://images.unsplash.com/photo-1596700673323-289d0c26620f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Matchbild från tidigare evenemang" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x250/a0aec0/ffffff?text=Matchbild+3';">
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl mb-2 text-blue-700">Svedala Street Fest</h3>
+                        <p class="text-gray-700 text-sm">En riktig folkfest med basket i fokus!</p>
+                    </div>
+                </div>
+                <!-- Fler bilder kan läggas till här -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakta Oss-sektion -->
+    <section id="kontakt" class="py-16 bg-white rounded-xl shadow-md mx-4 md:mx-auto mt-8 fade-in-up">
+        <div class="container text-center">
+            <h2 class="text-4xl font-bold mb-10 text-blue-700">Kontakta Oss</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Har du frågor om våra turneringar, vill du sponsra ett evenemang eller bara säga hej? Tveka inte att höra av dig!
+            </p>
+            <div class="flex flex-col items-center gap-6">
+                <p class="text-2xl font-semibold text-gray-800">
+                    <span class="text-blue-600">📧</span> E-post: <a href="mailto:info@streetballsweden.se" class="text-blue-600 hover:underline">info@streetballsweden.se</a>
+                </p>
+                <div class="text-2xl font-semibold text-gray-800">
+                    Följ oss på sociala medier:
+                    <div class="flex justify-center gap-6 mt-4">
+                        <!-- Facebook Icon -->
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out transform hover:scale-110" aria-label="Följ oss på Facebook">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- Instagram Icon -->
+                        <a href="#" class="text-pink-600 hover:text-pink-800 transition duration-300 ease-in-out transform hover:scale-110" aria-label="Följ oss på Instagram">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.002 3.797.048.843.038 1.48.15 2.07.355.6.207 1.127.488 1.647.904.52.415.953.96 1.27 1.648.317.687.487 1.403.518 2.324.038.843.046 1.096.046 3.293V12.31c0 2.197-.008 2.45-.046 3.293-.031.92-.201 1.637-.518 2.324-.317.687-.749 1.232-1.27 1.648-.52.416-1.047.697-1.647.904-.6.205-1.227.317-2.07.355-.81.038-1.047.048-3.29 0-2.197-.008-2.45-.008-3.29-.046-.843-.038-1.48-.15-2.07-.355-.6-.207-1.127-.488-1.647-.904-.52-.415-.953-.96-1.27-1.648-.317-.687-.487-1.403-.518-2.324-.038-.843-.046-1.096-.046-3.293V11.69c0-2.197.008-2.45.046-3.293.031-.92.201-1.637.518-2.324.317-.687.749-.96 1.27-1.648.52-.415 1.047-.697 1.647-.904.6-.205 1.227-.317 2.07-.355C9.963 2.002 10.216 2 12.315 2zm0 2.153c-2.137 0-2.417.003-3.25.04S7.844 4.39 7.35 4.54c-.456.135-.795.317-1.144.662-.349.345-.531.684-.666 1.14-.147.495-.213.775-.251 1.61-.037.833-.045 1.05-.045 3.106v.007c0 2.056.008 2.273.045 3.106.038.835.104 1.115.251 1.61.135.456.317.795.666 1.14.349.345.688.527 1.144.662.494.147.774.213 1.607.251.833.037 1.05.045 3.106.045h.007c2.056 0 2.273-.008 3.106-.045.835-.038 1.115-.104 1.61-.251.456-.135.795-.317 1.14-.662.345-.349.527-.688.662-1.144.147-.494.213-.774.251-1.607.037-.833.045-1.05.045-3.106v-.007c0-2.056-.008-2.273-.045-3.106-.038-.835-.104-1.115-.251-1.61-.135-.456-.317-.795-.662-1.14-.345-.349-.684-.531-1.14-.666-.495-.147-.775-.213-1.61-.251C14.723 4.155 14.46 4.153 12.315 4.153zM12 7.18c-2.652 0-4.81 2.158-4.81 4.81s2.158 4.81 4.81 4.81 4.81-2.158 4.81-4.81-2.158-4.81-4.81-4.81zm0 2.153c1.463 0 2.652 1.19 2.652 2.652S13.463 14.8 12 14.8s-2.652-1.19-2.652-2.652S10.537 7.18 12 7.18z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- TikTok Icon -->
+                        <a href="#" class="text-gray-800 hover:text-gray-900 transition duration-300 ease-in-out transform hover:scale-110" aria-label="Följ oss på TikTok">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12.525 2.156c.102.04.195.1.282.164.08.062.15.13.207.203.057.073.095.15.112.23.017.08.026.16.026.24v9.231c0 .085-.008.16-.026.23-.018.07-.056.14-.112.203-.057.063-.127.13-.207.195-.087.064-.179.124-.282.164-.103.04-.21.06-.32.06h-2.548c-.11 0-.218-.02-.32-.06-.103-.04-.195-.1-.282-.164-.08-.062-.15-.13-.207-.203-.057-.073-.095-.15-.112-.23-.017-.08-.026-.16-.026-.24V9.66c0-.085.008-.16.026-.23.018-.07.056-.14.112-.203.057-.063.127-.13.207-.195.087-.064.179-.124.282-.164.103-.04.21-.06.32-.06h2.548c.11 0 .218.02.32.06.103.04.195.1.282.164.08.062.15.13.207.203.057.073.095.15.112.23.017.08.026.16.026.24v.27c0 .085-.008.16-.026.23-.018.07-.056.14-.112.203-.057.063-.127.13-.207.195-.087.064-.179.124-.282.164-.103.04-.21.06-.32.06h-2.548c-.11 0-.218-.02-.32-.06-.103-.04-.195-.1-.282-.164-.08-.062-.15-.13-.207-.203-.057-.073-.095-.15-.112-.23-.017-.08-.026-.16-.026-.24V7.55c0-.085.008-.16.026-.23.018-.07.056-.14.112-.203.057-.063.127-.13.207-.195.087-.064.179-.124.282-.164.103-.04.21-.06.32-.06h2.548c.11 0 .218-.02.32-.06.103-.04.195-.1.282-.164.08-.062.15-.13.207-.203.057-.073.095-.15.112-.23.017-.08.026-.16.026-.24V4.92c0-.085-.008-.16-.026-.23-.018-.07-.056-.14-.112-.203-.057-.063-.127-.13-.207-.195-.087-.064-.179-.124-.282-.164-.103-.04-.21-.06-.32-.06h-2.548c-.11 0-.218-.02-.32-.06-.103-.04-.195-.1-.282-.164-.08-.062-.15-.13-.207-.203-.057-.073-.095-.15-.112-.23-.017-.08-.026-.16-.026-.24V2.156zM22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vanliga Frågor (FAQ)-sektion -->
+    <section id="faq" class="py-16 bg-blue-50 rounded-xl shadow-md mx-4 md:mx-auto mt-8 fade-in-up">
+        <div class="container">
+            <h2 class="text-4xl font-bold text-center mb-10 text-blue-700">Vanliga Frågor (FAQ)</h2>
+            <div class="space-y-6 max-w-3xl mx-auto">
+                <!-- Fråga 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 scale-in">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                        Behöver jag ha basket-erfarenhet för att delta?
+                    </h3>
+                    <p class="text-gray-700">
+                        Absolut inte! Våra turneringar är öppna för alla över 15 år, oavsett tidigare erfarenhet. Vi handlar om att ha kul och spela basket tillsammans.
+                    </p>
+                </div>
+                <!-- Fråga 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 scale-in">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                        Hur ofta anordnar ni turneringar?
+                    </h3>
+                    <p class="text-gray-700">
+                        Vi har turneringar en gång i veckan, med platser som varierar mellan Svedala, Malmö och Lund. Håll koll på "Kommande Tävlingar" för de senaste schemana!
+                    </p>
+                </div>
+                <!-- Fråga 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 scale-in">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                        Finns det något att dricka på plats?
+                    </h3>
+                    <p class="text-gray-700">
+                        Ja, vi ser till att det finns svalkande dryck tillgänglig för alla deltagare under våra evenemang.
+                    </p>
+                </div>
+                <!-- Fråga 4 -->
+                <div class="bg-white rounded-lg shadow-md p-6 scale-in">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                        Vad kan man vinna?
+                    </h3>
+                    <p class="text-gray-700">
+                        Vi erbjuder spännande priser till vinnarlagen i varje turnering. Håll utkik för mer information om specifika priser inför varje evenemang!
+                    </p>
+                </div>
+                <!-- Fråga 5 -->
+                <div class="bg-white rounded-lg shadow-md p-6 scale-in">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-3">
+                        Hur anmäler jag mig eller mitt lag?
+                    </h3>
+                    <p class="text-gray-700">
+                        Information om anmälningsprocessen kommer att publiceras under "Kommande Tävlingar" inför varje ny turnering. Följ oss på sociala medier för snabba uppdateringar!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-8 rounded-t-3xl">
+        <div class="container text-center text-sm">
+            <p>&copy; 2025 Street Ball Sweden. Alla rättigheter reserverade.</p>
+            <p class="mt-2">
+                <a href="#" class="hover:underline">Integritetspolicy</a> |
+                <a href="#" class="hover:underline">Användarvillkor</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript för animationer (fade-in-up och scale-in)
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateOnScrollElements = document.querySelectorAll('.fade-in-up, .scale-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        // Sluta observera när elementet har animerats för prestanda
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // Utlös när 10% av elementet är synligt
+            });
+
+            animateOnScrollElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Lägg till animation direkt för hero-sektionen vid laddning
+            document.querySelector('#hem').classList.add('animate');
+        });
+    </script>
+</body>
+</html>
